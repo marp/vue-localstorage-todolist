@@ -1,11 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <img alt="Vue logo" width="100" src="./assets/logo.png">
+  <h1>Vue LocalStorage ToDo List</h1>
   <div id="newTask">
       <input v-model="newTaskInput" placeholder="What you have to do?">
       <button @click="addTask">Add Task</button>
   </div>
+  <div id="tasksList">
   <div v-for="(task, index) in tasks" :key="index">
     <Task :task="task" :index="index" @remove="removeTask(index)" @done="doneTask(index)"/>
+  </div>
   </div>
 </template>
 
@@ -73,18 +76,25 @@ body {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  background-color: lightgray;
+  background-color: #fcfcfc;
   width: 500px;
   margin-left: auto;
   margin-right: auto;
 }
 
-#newTask {
-  background-color: white;
-  border: 3px black double;
-  border-radius: 50px;
-}
 #newTask > input {
-  width: 80%;
+  width: 400px;
+  padding: 10px;
+}
+
+button {
+  height: 40px;
+}
+
+#tasksList{
+  margin-left: 2px;
+  width: 494px;
+  text-align: left;
+  border: #2c3e50 solid 1px;
 }
 </style>

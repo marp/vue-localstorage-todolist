@@ -1,4 +1,5 @@
 # vue-localstorage-todolist
+This is very simple to-do list made by me to learn vue3.
 
 ## Project setup
 ```
